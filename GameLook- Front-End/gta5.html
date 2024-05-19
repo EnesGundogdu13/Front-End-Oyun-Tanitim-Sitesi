@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="pictures/logo-icon.ico" type="32x32">
+    <title>GameLook</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .gri {
+            color: #bbc2c7;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Offcanvas navbar large">
+            <a class="navbar-brand justify-content-start" href="index.html">
+                <img loading="lazy" src="pictures/logo-icon.png" class="p-2 ms-2" width="80" alt="Logo"
+                    draggable="false">
+            </a>
+            <ul class="navbar-nav flex-grow-1 pe-3 d-none">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="offcanvas offcanvas-start border-bottom" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand justify-content-start" href="#">
+                        <img loading="lazy" src="pictures/logo-icon.png" width="80" alt="Logo"
+                            draggable="false">
+                    </a>
+                    <div><button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button></div>
+
+                </div>
+
+                <div class="offcanvas-body justify-content-start">
+                    <ul class="navbar-nav justify-content-start flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-center">
+                        <form id="arabuton" class="form-inline w-100 ">
+                            <div class="input-group w-100">
+                                <input type="text" class="form-control mt-1 bg-light border-0" id="search-navbar"
+                                    placeholder="Oyun Ara" name="aranan" />
+                                <div id="search-results"></div>
+                                <div class="input-group-append mt-1">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-1" aria-current="page">Login</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-2" aria-current="page">Register</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <div class="image-text">
+                                <span class="image">
+                                    <img width="40px" height="40px" style="object-fit: cover;" class="rounded-circle"
+                                        src="pictures/user-picture/unknown-user.jpg" alt="" />
+                                </span>
+
+                                <!--
+                                    USERNAME AREA
+                                    <div class="text logo-text">
+                                        <span class="name">Enes <span>Gündoğdu</span></span>
+                                        <span class="card-userrole">
+                                    </span>
+                                -->
+                            </div>
+                </div>
+                        </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <h1 class="oyunismi">Grand Theft Auto V</h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <iframe width="746" height="414" src="https://www.youtube.com/embed/QkkoHAzjnUs?si=q6Gjn0evgDd7x3BL" allowfullscreen></iframe>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="gamePhoto/gamephoto/grand-theft-auto/picture1.jpg" class="d-block w-100"
+                                    alt="slider-picture-2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="gamePhoto/gamephoto/grand-theft-auto/picture2.jpg" width="746" height="414" class="d-block w-100"
+                                    alt="slider-picture-3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="gamePhoto/gamephoto/grand-theft-auto/picture3.jpeg" class="d-block w-100"
+                                    alt="slider-picture-4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <h3 style="color: white; margin-top: 20px;">Oyun Açıklaması</h3>
+                    <button class="buton" onclick="aciklama()">Açıklama</button>
+                    <button class="buton" onclick="yetiskinaciklamasi()">Yetişkin İçerik Açıklaması</button>
+                    <button class="buton" onclick="sistemgereksinimleri()">Sistem gereksinimleri</button>
+                    <button class="buton" onclick="saglik()">Sağlık Açıklaması</button>
+                    <p id="yazi" style="margin-top: 15px; color: white;"><b>200'den fazla Yılın Oyunu ödülü kazanan The
+                            Last of Us™'ta duygusal hikaye anlatımını ve unutulmaz karakterleri deneyimleyin.</b>
+                        <br><br> Enfekte olmuş ve sertleşmiş hayatta kalanların kol gezdiği harap olmuş bir medeniyette,
+                        yorgun bir kahraman olan Joel, 14 yaşındaki Ellie'yi askeri karantina bölgesinden kaçırmak için
+                        tutulur. Ancak, küçük bir iş olarak başlayan şey, kısa sürede acımasız bir ülke çapında
+                        yolculuğa dönüşür. <br> <br> The Last of Us tek oyunculu hikayenin tamamını ve Ellie ile en iyi
+                        arkadaşı Riley'nin hayatlarını sonsuza dek değiştiren olayları araştıran ünlü bir ön bölüm olan
+                        Left Behind'ı içerir. <br><br> ©2022 Sony Interactive Entertainment LLC. Naughty Dog LLC
+                        tarafından yaratılmış ve geliştirilmiştir. The Last of Us, Sony Interactive Entertainment
+                        LLC'nin ve ilgili şirketlerin ABD ve diğer ülkelerdeki tescilli ticari markasıdır.</p>
+
+                </div>
+                <div class="col-md-5">
+                    <div class="card">
+                        <img src="gamePhoto/gamephoto/grand-theft-auto/thumnail.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <div class="card-title" style="font-size: 26px;">
+                                    <del>₺ 2,024.92</del>
+                                    <h2 class="text-white">₺ 1,162.59</h2>
+                                </div>
+                            </div>
+                            <p class="card-text">Grand Theft Auto V'in PC sürümü, oyunculara 4k ve ötesinde çözünürlükle ve saniyede 60 kare tazeleme hızıyla Los Santos ve Blaine County dünyasını keşfetme fırsatını sunuyor.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><span class="me-5">İşletim Sistemi:</span>
+                                <img src="pictures/icons/windows.png" alt="" width="40" height="40">
+                                <img src="pictures/icons/linux.png" alt="" width="40" height="40">
+                            </li>
+                            <li class="list-group-item"><span class="me-5">Tür:</span> Aksiyon, Macera</li>
+                            <li class="list-group-item"><span class="me-5">Geliştirici:</span> Rockstar North</li>
+                            <li class="list-group-item"><span class="me-5">Yapımcı:</span> Rockstar Games</li>
+                            <li class="list-group-item"><span class="me-5">Yaş Sınırı: </span>
+                                <img src="pictures/icons/pegi18.jpeg" alt="" width="40" height="40">
+                                <img src="pictures/icons/m.jpeg" alt="" width="40" height="40">
+                            </li>
+                            <li class="list-group-item"><span class="me-5">Çıkış Tarihi:</span> 14 Nis 2015</li>
+                            <li class="list-group-item">Desteklenen Diller<br><br>
+                                Croatian, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian,
+                                Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Russian, Spanish, Swedish,
+                                Thai, Turkish, Portuguese-Brazil, Traditional Chinese, Spanish Mexico, Simplified
+                                Chinese
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 class="most-saled-games-on-pc">Diğer Oyunlar</h4>
+
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+                            <div class="card swiper-slide">
+                                <a href="thelastofus.html"><img src="gamePhoto/gamephoto/the-last-of-us/thumnail.jpg" alt=""
+                                        class="card-img"></a>
+
+                                <div class="card-content">
+                                    <a href="thelastofus.html">
+                                        <h2 class="name mb-4 mt-2">The Last of Us™ Part I</h2>
+                                    </a>
+                                    <div class="icon-and-price">
+                                        <!-- Sol taraftaki iconlar -->
+                                        <div>
+                                            <i class="fab fa-steam"></i>
+                                            <i class="fab fa-windows"></i>
+                                        </div>
+                                        <!-- Sağ taraftaki fiyat -->
+                                        <div>
+                                            <del>₺ 2,024.92</del>
+                                            <h5>₺ 1,162.59</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <a href="gta5.html"><img src="gamePhoto/gamephoto/grand-theft-auto/thumnail.jpg" alt=""
+                                        class="card-img"></a>
+
+                                <div class="card-content">
+                                    <a href="gta5.html">
+                                        <h2 class="name mb-4 mt-2">Grand Theft Auto V</h2>
+                                    </a>
+                                    <div class="icon-and-price">
+                                        <!-- Sol taraftaki iconlar -->
+                                        <div>
+                                            <i class="fab fa-steam"></i>
+                                            <i class="fab fa-windows"></i>
+                                        </div>
+                                        <!-- Sağ taraftaki fiyat -->
+                                        <div>
+                                            <del>₺ 1,156.52</del>
+                                            <h5>₺ 267.58</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <a href="ResidentEvil.html"><img src="gamePhoto/gamephoto/resident-evil-4/thumnail.jpg" alt=""
+                                        class="card-img"></a>
+
+                                <div class="card-content">
+                                    <a href="ResidentEvil.html">
+                                        <h2 class="name mb-4 mt-2">Resident Evil 4</h2>
+                                    </a>
+                                    <div class="icon-and-price">
+                                        <!-- Sol taraftaki iconlar -->
+                                        <div>
+                                            <i class="fab fa-steam"></i>
+                                            <i class="fab fa-windows"></i>
+                                        </div>
+                                        <!-- Sağ taraftaki fiyat -->
+                                        <div>
+                                            <del>₺ 1,301.73</del>
+                                            <h5>₺ 650.58</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <a href="#"><img src="gamePhoto/gamephoto/ea-fc/thumnail.jpg" alt=""
+                                        class="card-img"></a>
+
+                                <div class="card-content">
+                                    <a href="#">
+                                        <h2 class="name mb-4 mt-2">EA SPORTS FC™ 24</h2>
+                                    </a>
+                                    <div class="icon-and-price">
+                                        <!-- Sol taraftaki iconlar -->
+                                        <div>
+                                            <i class="fab fa-steam"></i>
+                                            <i class="fab fa-windows"></i>
+                                        </div>
+                                        <!-- Sağ taraftaki fiyat -->
+                                        <div>
+                                            <del>₺ 2,024.92</del>
+                                            <h5>₺ 1,012.46</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <a href="#"><img src="gamePhoto/gamephoto/diablo-ıv/thumnail.jpg" alt=""
+                                        class="card-img"></a>
+
+                                <div class="card-content">
+                                    <a href="#">
+                                        <h2 class="name mb-4 mt-2">Diablo® IV</h2>
+                                    </a>
+                                    <div class="icon-and-price">
+                                        <!-- Sol taraftaki iconlar -->
+                                        <div>
+                                            <i class="fab fa-steam"></i>
+                                            <i class="fab fa-windows"></i>
+                                        </div>
+                                        <!-- Sağ taraftaki fiyat -->
+                                        <div>
+                                            <del>₺ 2,024.92</del>
+                                            <h5>₺ 1,214.66</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card swiper-slide">
+                                <a href="#"><img src="gamePhoto/gamephoto/resident-evil-village/thumnail.jpg" alt=""
+                                        class="card-img"></a>
+
+                                <div class="card-content">
+                                    <a href="#">
+                                        <h2 class="name mb-4 mt-2">Resident Evil Village</h2>
+                                    </a>
+                                    <div class="icon-and-price">
+                                        <!-- Sol taraftaki iconlar -->
+                                        <div>
+                                            <i class="fab fa-steam"></i>
+                                            <i class="fab fa-windows"></i>
+                                        </div>
+                                        <!-- Sağ taraftaki fiyat -->
+                                        <div>
+                                            <del>₺ 867.82</del>
+                                            <h5>₺ 346.84</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-3">
+        <div class="d-flex align-items-center justify-content-center mt-4 mb-5">
+            <img src="pictures/long-logo.png" class="w-25" alt="">
+        </div>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 me-2">AnaSayfa</a></li>
+            <li class="nav-item"><a href="iletisim.html" class="nav-link px-2 me-2">İletişim</a></li>
+            <li class="nav-item"><a href="hakkımızda.html" class="nav-link px-2 me-2">Hakkımızda</a></li>
+        </ul>
+        <p class="m-0 text-center text-white">&copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script> GameLook | Tüm Hakları Saklıdır.
+        </p>
+    </footer>
+
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        function aciklama() {
+            var yeniMetin = "Genç bir serseri, inzivaya çekilmiş bir banka soyguncusu ve ürkütücü bir psikopat, kendilerini suç dünyasının, ABD hükümetinin ve eğlence sektörünün karışık ağlarında buluyor. Kendileri de dahil, hiç kimseye güvenemedikleri acımasız bir şehirde tehlikeli soygunlar yapmayı başarmak zorundalar.";
+            document.getElementById("yazi").innerHTML = yeniMetin;
+        }
+
+        function sistemgereksinimleri() {
+            var yeniMetin = "<span class='gri'> <b>MİNİMUM:</b> </span> <br> 64-bit işlemci ve işletim sistemi gerektirir <br> <span class='gri'> İşletim Sistemi: </span> Windows 10 (Version 1909 or Newer) <br> <span class='gri'> İşlemci: </span> AMD Ryzen 5 1500X, Intel Core i7-4770K <br> <span class='gri'>Bellek:</span> 16 GB RAM <br> <span class='gri'>Ekran Kartı:</span> AMD Radeon RX 470 (4 GB), AMD Radeon RX 6500 XT (4 GB), NVIDIA GeForce GTX 970 (4 GB), NVIDIA GeForce GTX 1050 Ti (4 GB) <br> <span class='gri'>Depolama:</span> 100 GB kullanılabilir alan <br> <span class='gri'>İlave Notlar:</span> SSD Recommended <br><br> <span class='gri'><b>ÖNERİLEN:</b></span> <br> 64-bit işlemci ve işletim sistemi gerektirir <br> <span class='gri'>İşletim Sistemi:</span> Windows 10 (Version 1909 or Newer) <br> <span class='gri'>İşlemci:</span> AMD Ryzen 5 3600X, Intel Core i7-8700 <br> <span class='gri'>Bellek:</span> 16 GB RAM <br> <span class='gri'>Ekran Kartı:</span> AMD Radeon RX 5700 XT (8 GB), AMD Radeon RX 6600 XT (8 GB), NVIDIA GeForce RTX 2070 SUPER (8 GB), NVIDIA GeForce RTX 3060 (8 GB) <br> <span class='gri'>Depolama:</span> 100 GB kullanılabilir alan <br> <span class='gri'>İlave Notlar:</span> SSD Recommended";
+            document.getElementById("yazi").innerHTML = yeniMetin;
+        }
+
+        function yetiskinaciklamasi() {
+            var yeniMetin = "<b>Geliştiriciler içeriği şu şekilde tarif ediyorlar:</b> <br> <br> Bu oyunda her yaşa uygun olmayan veya iş yerinde görüntülenmesi sakıncalı olabilecek içerikler yer alabilir: Genel Yetişkin İçerik";
+            document.getElementById("yazi").innerHTML = yeniMetin;
+        }
+
+        function saglik() {
+            var yeniMetin = "<b> Uyarı:</b> Epilepsi ya da nöbet geçmişiniz varsa kullanmadan önce bir doktora danışın. Bazı şekiller, daha önce görülmemiş olsa bile nöbetlere neden olabilir. Daha fazla ayrıntı için ve kullanmadan önce, önemli sağlık ve güvenlik uyarılarına göz atın:";
+            document.getElementById("yazi").innerHTML = yeniMetin;
+        }
+    </script>
+
+</body>
+
+</html>

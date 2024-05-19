@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="shortcut icon" href="pictures/logo-icon.ico" type="32x32">
+        <title>GameLook</title>
+    
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+    
+<style>
+    .yazi{
+        color: white;
+        font-family: 'quicksand-medium'
+
+    }
+</style>
+
+    </head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Offcanvas navbar large">
+            <a class="navbar-brand justify-content-start" href="index.html">
+                <img loading="lazy" src="pictures/logo-icon.png" class="p-2 ms-2" width="80" alt="Logo"
+                    draggable="false">
+            </a>
+            <ul class="navbar-nav flex-grow-1 pe-3 d-none">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="offcanvas offcanvas-start border-bottom" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand justify-content-start" href="#">
+                        <img loading="lazy" src="pictures/logo-icon.png" width="80" alt="Logo"
+                            draggable="false">
+                    </a>
+                    <div><button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button></div>
+
+                </div>
+
+                <div class="offcanvas-body justify-content-start">
+                    <ul class="navbar-nav justify-content-start flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-center">
+                        <form id="arabuton" class="form-inline w-100 ">
+                            <div class="input-group w-100">
+                                <input type="text" class="form-control mt-1 bg-light border-0" id="search-navbar"
+                                    placeholder="Oyun Ara" name="aranan" />
+                                <div id="search-results"></div>
+                                <div class="input-group-append mt-1">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-1" aria-current="page">Login</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-2" aria-current="page">Register</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <div class="image-text">
+                                <span class="image">
+                                    <img width="40px" height="40px" style="object-fit: cover;" class="rounded-circle"
+                                        src="pictures/user-picture/unknown-user.jpg" alt="" />
+                                </span>
+
+                                <!--
+                                    USERNAME AREA
+                                    <div class="text logo-text">
+                                        <span class="name">Enes <span>Gündoğdu</span></span>
+                                        <span class="card-userrole">
+                                    </span>
+                                -->
+                            </div>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+    
+<main>
+    <div class="container">
+        <div class="row" style="margin-bottom: 88px;">
+            <div class="col-md-6">
+                <img style="margin-top: 100px;" src="pictures/logo.png" alt="" width="350px" height="300px">
+            </div>
+            <div class="col-md-6">
+                <p class="yazi">Hoş Geldiniz! GameLook Hakkında
+
+                    GameLook, oyun dünyasının heyecan verici bir parçası olarak, oyunculara eşsiz ve keyifli bir deneyim sunmayı amaçlayan bir oyuncu topluluğudur. Oyun tutkunlarına, en sevdikleri oyunları keşfetme, satın alma ve paylaşma imkanı tanıyan bir platform olarak, GameLook, oyun dünyasını bir araya getiren bir köprü olarak ön plana çıkmaktadır.
+                    
+                    Vizyonumuz
+                    
+                    GameLook, oyun tutkunlarının oyunlara olan sevgisini güçlendirmeyi ve paylaşmayı teşvik etmeyi amaçlamaktadır. Oyun dünyasının çeşitliliğini kutlayan bir atmosferde, oyuncular arasında bağlar oluşturarak, GameLook'un oyun severler için birinci tercih olmasını hedefliyoruz.
+                    
+                    Misyonumuz
+                    
+                    GameLook olarak, oyun deneyimini zenginleştirmek ve kolaylaştırmak adına çabalıyoruz. Güvenli ve güvenilir bir platform sunarak, kullanıcılarımıza en yeni ve popüler oyunlara sorunsuz bir erişim sağlamayı amaçlıyoruz. Aynı zamanda, topluluğumuzu güçlendirmek ve oyun dünyasını daha yakından birleştirmek için çeşitli etkinlikler ve kampanyalar düzenliyoruz.
+                    
+                    GameLook Farkı
+                    
+                    GameLook, müşteri memnuniyetine ve güvenli alışverişe büyük önem verir. Güçlü bir müşteri destek ekibi ile birlikte, kullanıcılarımızın her türlü soru, sorun veya taleplerine hızlı ve etkili bir şekilde yanıt veriyoruz. Ayrıca, güvenli ödeme sistemlerimizle kullanıcılarımızın kişisel ve finansal bilgilerini koruyarak, güvenli bir alışveriş ortamı sunuyoruz.
+                    
+                    Sosyal Sorumluluk
+                    
+                    GameLook olarak, oyun dünyasına değer katmanın yanı sıra, topluma da katkıda bulunmayı önemsiyoruz. Sosyal sorumluluk projeleri ve bağışlar aracılığıyla, oyun dünyasını daha geniş bir perspektiften ele almayı ve toplumumuza olumlu bir etki yapmayı amaçlıyoruz.
+                    
+                    Bizimle İletişime Geçin
+                    
+                    GameLook'u keşfedin, deneyimleyin ve paylaşın! Her türlü soru, geri bildirim veya işbirliği teklifleri için bize ulaşmaktan çekinmeyin. Sizlere daha iyi hizmet verebilmek için buradayız.
+                    
+                    <br><br>Teşekkür ederiz,
+                    GameLook Ekibi</p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+    <footer class="py-3">
+        <div class="d-flex align-items-center justify-content-center mt-4 mb-5">
+            <img src="pictures/long-logo.png" class="w-25" alt="">
+        </div>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 me-2">AnaSayfa</a></li>
+            <li class="nav-item"><a href="iletisim.html" class="nav-link px-2 me-2">İletişim</a></li>
+            <li class="nav-item"><a href="hakkımızda.html" class="nav-link px-2 me-2">Hakkımızda</a></li>
+        </ul>
+        <p class="m-0 text-center text-white">&copy;
+            <script>
+            document.write(new Date().getFullYear());
+            </script> GameLook | Tüm Hakları Saklıdır.
+        </p>
+    </footer>
+
+        <!-- Swiper JS -->
+        <script src="js/swiper-bundle.min.js"></script>
+
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>

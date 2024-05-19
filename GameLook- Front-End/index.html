@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="pictures/logo-icon.ico" type="32x32">
+    <title>GameLook</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Offcanvas navbar large">
+            <a class="navbar-brand justify-content-start" href="index.html">
+                <img loading="lazy" src="pictures/logo-icon.png" class="p-2 ms-2" width="80" alt="Logo"
+                    draggable="false">
+            </a>
+            <ul class="navbar-nav flex-grow-1 pe-3 d-none">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="offcanvas offcanvas-start border-bottom" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand justify-content-start" href="#">
+                        <img loading="lazy" src="pictures/logo-icon.png" width="80" alt="Logo"
+                            draggable="false">
+                    </a>
+                    <div><button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button></div>
+
+                </div>
+
+                <div class="offcanvas-body justify-content-start">
+                    <ul class="navbar-nav justify-content-start flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-center">
+                        <form id="arabuton" class="form-inline w-100 ">
+                            <div class="input-group w-100">
+                                <input type="text" class="form-control mt-1 bg-light border-0" id="search-navbar"
+                                    placeholder="Oyun Ara" name="aranan" />
+                                <div id="search-results"></div>
+                                <div class="input-group-append mt-1">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-1" aria-current="page">Login</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-2" aria-current="page">Register</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <div class="image-text">
+                                <span class="image">
+                                    <img width="40px" height="40px" style="object-fit: cover;" class="rounded-circle"
+                                        src="pictures/user-picture/unknown-user.jpg" alt="" />
+                                </span>
+
+                                    <div class="text logo-text">
+                                        <span class="name" style="padding-left: 15px;">Enes <span>Gündoğdu</span></span>
+                                        <span class="card-userrole">
+                                    </span>
+                            </div>
+                </div>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="Mainpageslider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="pictures/slider-picture/hogwarts.png" class="d-block w-100" alt="slider-picture-1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pictures/slider-picture/lastofus.png" class="d-block w-100" alt="slider-picture-2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pictures/slider-picture/uncharted.png" class="d-block w-100" alt="slider-picture-3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="pictures/slider-picture/witcher.png" class="d-block w-100" alt="slider-picture-4">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#Mainpageslider"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#Mainpageslider"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <h4 class="most-saled-games-on-pc">İndirimde ki oyunlar</h4>
+
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <a href="thelastofus.html"><img src="gamePhoto/gamephoto/the-last-of-us/thumnail.jpg" alt=""
+                                    class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="thelastofus.html">
+                                    <h2 class="name mb-4 mt-2">The Last of Us™ Part I</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 2,024.92</del>
+                                        <h5>₺ 1,162.59</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="gta5.html"><img src="gamePhoto/gamephoto/grand-theft-auto/thumnail.jpg" alt=""
+                                    class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="gta5.html">
+                                    <h2 class="name mb-4 mt-2">Grand Theft Auto V</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 1,156.52</del>
+                                        <h5>₺ 267.58</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="ResidentEvil.html"><img src="gamePhoto/gamephoto/resident-evil-4/thumnail.jpg" alt=""
+                                    class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="ResidentEvil.html">
+                                    <h2 class="name mb-4 mt-2">Resident Evil 4</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 1,301.73</del>
+                                        <h5>₺ 650.58</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="#"><img src="gamePhoto/gamephoto/ea-fc/thumnail.jpg" alt="" class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="#">
+                                    <h2 class="name mb-4 mt-2">EA SPORTS FC™ 24</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 2,024.92</del>
+                                        <h5>₺ 1,012.46</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="#"><img src="gamePhoto/gamephoto/diablo-ıv/thumnail.jpg" alt=""
+                                    class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="#">
+                                    <h2 class="name mb-4 mt-2">Diablo® IV</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 2,024.92</del>
+                                        <h5>₺ 1,214.66</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="#"><img src="gamePhoto/gamephoto/resident-evil-village/thumnail.jpg" alt=""
+                                    class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="#">
+                                    <h2 class="name mb-4 mt-2">Resident Evil Village</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 867.82</del>
+                                        <h5>₺ 346.84</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+            </div>
+
+            <h4 class="most-saled-games-on-pc">En çok satan oyunlar</h4>
+
+            <div class="slide-container swiper">
+                <div class="slide-content-2">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <img src="gamePhoto/gamephoto/baldurs-gate-3/thumnail.jpg" alt="" class="card-img">
+                            <div class="card-content">
+                                <h2 class="name mb-4">Baldur's Gate 3</h2>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-microsoft"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <h5>₺ 1,012.17</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="#"><img src="gamePhoto/gamephoto/cyberpunk-2077/thumnail.jpg" alt=""
+                                    class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="#">
+                                    <h2 class="name mb-4 mt-2">Cyberpunk 2077</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 1,301.73</del>
+                                        <h5>₺ 650.58</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <img src="gamePhoto/gamephoto/street-fighter-6/thumnail.jpg" alt="" class="card-img">
+                            <div class="card-content">
+                                <h2 class="name mb-4">Street Fighter™ 6</h2>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-microsoft"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 1,301.73</del>
+                                        <h5>₺ 858.85</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="#"><img src="gamePhoto/gamephoto/ea-fc/thumnail.jpg" alt="" class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="#">
+                                    <h2 class="name mb-4 mt-2">EA SPORTS FC™ 24</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-windows"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 2,024.92</del>
+                                        <h5>₺ 1,012.46</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <img src="gamePhoto/gamephoto/hogwarts-legacy/thumnail.jpg" alt="" class="card-img">
+                            <div class="card-content">
+                                <h2 class="name mb-4">Hogwarts Legacy</h2>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fab fa-steam"></i>
+                                        <i class="fab fa-microsoft"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <del>₺ 1,735.64</del>
+                                        <h5>₺ 1,041.10</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <a href="#"><img src="gamePhoto/gamephoto/the-legend-of-zelda/thumnail.jpg" alt=""
+                                    class="card-img"></a>
+
+                            <div class="card-content">
+                                <a href="#">
+                                    <h2 class="name mb-4 mt-2">The Legend of Zelda: Tears of the Kingdom</h2>
+                                </a>
+                                <div class="icon-and-price">
+                                    <!-- Sol taraftaki iconlar -->
+                                    <div>
+                                        <i class="fa-solid fa-gamepad"></i>
+                                    </div>
+                                    <!-- Sağ taraftaki fiyat -->
+                                    <div>
+                                        <h5>₺ 2,024.92</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next-2 swiper-navBtn-2"></div>
+                <div class="swiper-button-prev-2 swiper-navBtn-2"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-3">
+        <div class="d-flex align-items-center justify-content-center mt-4 mb-5">
+            <img src="pictures/long-logo.png" class="w-25" alt="">
+        </div>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 me-2">Ana Sayfa</a></li>
+            <li class="nav-item"><a href="iletisim.html" class="nav-link px-2 me-2">İletişim</a></li>
+            <li class="nav-item"><a href="hakkımızda.html" class="nav-link px-2 me-2">Hakkımızda</a></li>
+        </ul>
+        <p class="m-0 text-center text-white">&copy;
+            <script>
+            document.write(new Date().getFullYear());
+            </script> GameLook | Tüm Hakları Saklıdır.
+        </p>
+    </footer>
+
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+<style>
+.gradient-box {
+    width: auto;
+    background: linear-gradient(rgb(89, 158, 208) 0%, rgb(16, 15, 14) 70.05%);
+}
+
+.img-container {
+    width: 100%;
+    max-width: 1200px;
+    object-fit: cover;
+}
+
+.profileImage{
+    box-shadow: rgb(0, 166, 255) 0px 0px 5px 3px;
+    border-radius: 10px; 
+    width: 128px;
+    height: 128px;
+    float: left;
+}
+
+.profileImage img {
+  object-fit: cover;
+}
+
+.profilMetin{
+    color: white;
+    font-family: quicksand-bold;
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+.turuncu-buton {
+    background-color: #ff7f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease
+}
+
+.turuncu-buton:hover {
+    background-color: #ff9933;
+}
+
+.gameImage {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 15px !important;
+    width: 310px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.arkaplan{
+    background-color: rgb(23, 23, 22) !important;
+    border: 0;
+    color: white !important;
+}
+
+.arkaplan::placeholder{
+    color: gray;
+}
+
+.card body{
+    background-color: rgb(23, 23, 22) !important;
+}
+
+.arkadaslar{
+    color: white;
+}
+
+.arkadaslar img{
+    margin-left: 30px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.seviye{
+    width: 40px; 
+    height: 40px; 
+    background-color: gray; 
+    border-radius: 50%; 
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.deneme{
+    background-color: rgb(17, 17, 16) !important;
+}
+
+
+</style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Offcanvas navbar large">
+            <a class="navbar-brand justify-content-start" href="index.html">
+                <img loading="lazy" src="pictures/logo-icon.png" class="p-2 ms-2" width="80" alt="Logo"
+                    draggable="false">
+            </a>
+            <ul class="navbar-nav flex-grow-1 pe-3 d-none">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                </li>
+                <li class="nav-item">
+                    <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                </li>
+            </ul>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2"><span class="navbar-toggler-icon"></span></button>
+
+            <div class="offcanvas offcanvas-start border-bottom" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand justify-content-start" href="#">
+                        <img loading="lazy" src="pictures/logo-icon.png" width="80" alt="Logo"
+                            draggable="false">
+                    </a>
+                    <div><button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button></div>
+
+                </div>
+
+                <div class="offcanvas-body justify-content-start">
+                    <ul class="navbar-nav justify-content-start flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link" aria-current="page">ANA SAYFA</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="iletisim.html" class="nav-link" aria-current="page">İLETİŞİM</a>
+                        </li>
+                        <li class="nav-item me-3 mt-1">
+                            <a href="hakkımızda.html" class="nav-link" aria-current="page">HAKKIMIZDA</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav justify-content-center">
+                        <form id="arabuton" class="form-inline w-100 ">
+                            <div class="input-group w-100">
+                                <input type="text" class="form-control mt-1 bg-light border-0" id="search-navbar"
+                                    placeholder="Oyun Ara" name="aranan" />
+                                <div id="search-results"></div>
+                                <div class="input-group-append mt-1">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fas fa-search fa-sm"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </ul>
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-1" aria-current="page">Login</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <a href="index.html" class="nav-link me-2" aria-current="page">Register</a>
+                        </li>
+                        <li class="nav-item me-2 mt-1">
+                            <div class="image-text">
+                                <span class="image">
+                                    <img width="40px" height="40px" style="object-fit: cover;" class="rounded-circle"
+                                        src="pictures/user-picture/unknown-user.jpg" alt="" />
+                                </span>
+
+                                    <div class="text logo-text">
+                                        <span class="name" style="padding-left: 15px;">Enes <span>Gündoğdu</span></span>
+                                        <span class="card-userrole">
+                                    </span>
+                            </div>
+                </div>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="gradient-box"> <br><br><br><br><br><br>
+            <div class="container">
+                <img src="pictures/slider-picture/witcher.png" class="rounded mx-auto d-block img-container" alt="..." width="1200" height="300">
+                <div class="row" style="margin-left: 40px;">
+                    <div class="col-md-10" style=" position: relative; margin-top: 20px;">
+                        <div class="profileImage">
+                            <img src="pictures/slider-picture/lastofus.png" class="profileImage" alt="">
+                        </div>
+                        <div class="profilMetin">
+                            <p>Enes Gündoğdu</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, doloremque.</p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2" style="text-align: center; margin-top: 20px;">    
+                        <div style="position: relative; display: inline-block; vertical-align: top; margin-bottom: 10px;">
+                            Seviye                  
+                            <div class="seviye">
+                                1 
+                            </div>
+                        </div>
+                        <br>
+                        <button class="turuncu-buton" style="margin-top: 15px;">Profil Düzenle</button>
+                    
+                </div>
+            </div>
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-md-8 ">
+                    <div class="card mb-3 deneme" style="max-width: 750px;">
+                        <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="gamePhoto/photo2.webp" class="img-fluid rounded-start gameImage" alt="...">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body" >
+                                <div>
+                                    <h5 class="card-title" style="margin-left: 7px;">Oyunun Adı</h5>
+                                    <p class="card-text" style="margin-left: 7px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, modi. Odio nihil ullam laborum rem quisquam suscipit assumenda voluptate atque doloremque mollitia vitae, velit recusandae possimus optio maxime inventore accusamus.</p>
+                                </div>
+                                <p class="card-text" style="float: right; margin-top: 40px;">Satın Alma Tarihi: 22.02.2024</p>
+                                <p class="card-text" style="margin-top: 40px;">1 İnceleme</p>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="input-group mb-3" style="width: 87.8%;">
+                    
+                    <div class="input-group-text arkaplan">
+                        <img src="gamePhoto/photo1.webp" alt="" width="50px" height="50px" style="border-radius: 30px;">
+                    </div>            
+                    <input type="text" class="form-control arkaplan" placeholder="Gönderi Oluştur" style="box-shadow: none;">
+                    <button class="input-group-text arkaplan">
+                        <img src="pictures/icons/add.png" alt="" width="30px" height="30px">
+                    </button>
+                    <button class="input-group-text arkaplan">
+                        <img src="pictures/icons/send.png" alt="" width="30px" height="30px">
+                    </button>
+                  </div>
+
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body"> <!--buraya deneme classı verilecek-->
+                        <img src="gamePhoto/photo1.webp" alt="" width="50px" height="50px" style="border-radius: 30px;">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="card deneme">
+                        <!-- <img src="gamePhoto/gamephoto/grand-theft-auto/thumnail.jpg" class="card-img-top" alt="..."> -->
+                        <div class="card-body ">
+                            <div class="text-center">
+                                <div class="card-title">
+                                    <p>Şu anda çevrimdışı</p>
+                                    <h2 style="font-size: 15px; color: white;">Son çevrimiçi 10 saat 12 dakika</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            </li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"><span class="me-5">Oyuncu:</span> 1</li>
+                            <li class="list-group-item"><span class="me-5">İnceleme:</span>1</li>
+                            <li class="list-group-item"><span class="me-5">topluluk: </span> 1</li>
+                            <li class="list-group-item"><span class="me-5">Kayıt tarihi:</span> 14 Nis 2015</li>
+                            <li class="list-group-item"></li>
+                        </ul>
+
+                        <p style="margin-left: 15px;">Arkadaşlar: 1</p>
+
+                        <div class="arkadaslar">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="gamePhoto/gamephoto/cyberpunk-2077/thumnail.jpg" alt="...">
+                                </div>
+                                <div class="col-md-9">
+                                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                                        <div>
+                                            <p>Burak</p>
+                                            <p>Aktif</p>
+                                        </div>
+                                        <p style="margin-left: 140px; margin-top: 20px;">Seviye</p>
+                                        <div class="seviye" style="margin-right: 15px;">
+                                             1
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> <br> <br> <br>
+    </main>
+
+
+
+    <footer class="py-3">
+        <div class="d-flex align-items-center justify-content-center mt-4 mb-5">
+            <img src="pictures/long-logo.png" class="w-25" alt="">
+        </div>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 me-2">Ana Sayfa</a></li>
+            <li class="nav-item"><a href="iletisim.html" class="nav-link px-2 me-2">İletişim</a></li>
+            <li class="nav-item"><a href="hakkımızda.html" class="nav-link px-2 me-2">Hakkımızda</a></li>
+        </ul>
+        <p class="m-0 text-center text-white">&copy;
+            <script>
+            document.write(new Date().getFullYear());
+            </script> GameLook | Tüm Hakları Saklıdır.
+        </p>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
